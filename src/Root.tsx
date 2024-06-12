@@ -1,9 +1,12 @@
 import {
 	AppShell,
 	Burger,
+	Center,
 	Group,
+	Loader,
 	NavLink,
 	ScrollArea,
+	Stack,
 	Title,
 	Tooltip
 } from '@mantine/core'
@@ -11,10 +14,12 @@ import { useDisclosure } from '@mantine/hooks'
 import logo from './assets/react.svg'
 import { ActionIcon } from '@mantine/core'
 import { IconBrandGithub } from '@tabler/icons-react'
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
+import { Suspense } from 'react'
 
 export default function Root() {
-	const [opened, { toggle }] = useDisclosure()
+	const [opened, { toggle, close }] = useDisclosure()
+	const location = useLocation()
 
 	return (
 		<AppShell
@@ -24,7 +29,7 @@ export default function Root() {
 		>
 			<AppShell.Header>
 				<Group h="100%" px="md" justify="space-between">
-					<Group>
+					<Group gap="xs">
 						<Burger
 							opened={opened}
 							onClick={toggle}
@@ -32,7 +37,7 @@ export default function Root() {
 							size="sm"
 						/>
 						<Link to={'/'}>
-							<Group>
+							<Group gap="xs">
 								<img src={logo} alt="React Logo" />
 								<Title order={5}>Interview Questions</Title>
 							</Group>
@@ -58,11 +63,28 @@ export default function Root() {
 			</AppShell.Header>
 			<AppShell.Navbar>
 				<ScrollArea p="xs">
-					<NavLink label="First child link" />
+					<NavLink
+						label="Interactive Shape Based UI | Uber"
+						component={Link}
+						to="/interactive-shape-based-ui-uber"
+						active={location.pathname === '/interactive-shape-based-ui-uber'}
+						onClick={close}
+					/>
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShell.Main>
-				<Outlet />
+				<Suspense
+					fallback={
+						<Center h={'calc(100vh - 120px)'}>
+							<Stack gap={0} align="center">
+								<Loader type="dots" size={50} />
+								<Title order={3}>Loading</Title>
+							</Stack>
+						</Center>
+					}
+				>
+					<Outlet />
+				</Suspense>
 			</AppShell.Main>
 		</AppShell>
 	)

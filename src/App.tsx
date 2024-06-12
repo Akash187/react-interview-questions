@@ -5,7 +5,10 @@ import AppRouter from './AppRouter'
 
 export default function App() {
 	return (
-		<MantineProvider defaultColorScheme="dark">
+		<MantineProvider
+			defaultColorScheme="dark"
+			theme={{ primaryColor: 'yellow' }}
+		>
 			<RouterProvider router={AppRouter} />
 		</MantineProvider>
 	)

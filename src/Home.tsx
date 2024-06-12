@@ -11,7 +11,9 @@ const Home = () => {
 			wrap="wrap"
 			h={'calc(100vh - 120px)'}
 		>
-			<Title order={1}>Top React Interview Questions</Title>
+			<Title ta="center" order={1}>
+				Top React Interview Questions
+			</Title>
 			<img className="logo" src={logo} />
 		</Flex>
 	)

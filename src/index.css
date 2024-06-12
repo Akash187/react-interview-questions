@@ -32,3 +32,8 @@ a {
     transform: rotate(360deg);
   }
 }
+
+/* Fixes tab size for code */
+.mantine-CodeHighlightTabs-pre {
+  tab-size: 2;
+}

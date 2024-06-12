@@ -1,6 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom'
+import { lazy } from 'react'
 import Root from './Root'
 import Home from './Home'
+const InteractiveShapeBasedUI = lazy(
+	() => import('./questions/interactive shape based ui/InteractiveShapeBasedUI')
+)
 
 const AppRouters = createBrowserRouter([
 	{
@@ -13,12 +17,8 @@ const AppRouters = createBrowserRouter([
 				element: <Home />
 			},
 			{
-				path: '/hello',
-				element: (
-					<div>
-						<div>Hello World</div>
-					</div>
-				)
+				path: '/interactive-shape-based-ui-uber',
+				element: <InteractiveShapeBasedUI />
 			}
 		]
 	}
