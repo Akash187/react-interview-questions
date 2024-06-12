@@ -1,4 +1,4 @@
-import { Flex, Title } from '@mantine/core'
+import { Flex, Anchor, Title } from '@mantine/core'
 import logo from './assets/react.svg'
 
 const Home = () => {
@@ -15,6 +15,12 @@ const Home = () => {
 				Top React Interview Questions
 			</Title>
 			<img className="logo" src={logo} />
+			<div>
+				Made with ❤️ by{' '}
+				<Anchor c="blue" href="https://github.com/Akash187" target="_blank">
+					Akash Kumar Seth
+				</Anchor>
+			</div>
 		</Flex>
 	)
 }

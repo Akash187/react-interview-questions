@@ -64,7 +64,7 @@ export default function Root() {
 			<AppShell.Navbar>
 				<ScrollArea p="xs">
 					<NavLink
-						label="Interactive Shape Based UI | Uber"
+						label="1. Interactive Shape Based UI | Uber"
 						component={Link}
 						to="/interactive-shape-based-ui-uber"
 						active={location.pathname === '/interactive-shape-based-ui-uber'}
