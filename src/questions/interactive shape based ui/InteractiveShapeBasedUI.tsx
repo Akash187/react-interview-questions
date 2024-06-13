@@ -18,7 +18,7 @@ const InteractiveShapeBasedUI = () => {
 					Original Question Link
 				</Button>
 			</Group>
-			<Tabs value={activeTab} onChange={setActiveTab}>
+			<Tabs value={activeTab} keepMounted={false} onChange={setActiveTab}>
 				<Tabs.List>
 					<Tabs.Tab value="question">Question</Tabs.Tab>
 					<Tabs.Tab value="solution">Solution</Tabs.Tab>
