@@ -5,6 +5,9 @@ import Home from './Home'
 const InteractiveShapeBasedUI = lazy(
 	() => import('./questions/interactive shape based ui/InteractiveShapeBasedUI')
 )
+const OverlappingCircleApp = lazy(
+	() => import('./questions/overlapping circle app/OverlappingCircleApp')
+)
 
 const AppRouters = createBrowserRouter([
 	{
@@ -17,8 +20,12 @@ const AppRouters = createBrowserRouter([
 				element: <Home />
 			},
 			{
-				path: '/interactive-shape-based-ui-uber',
+				path: 'interactive-shape-based-ui-uber',
 				element: <InteractiveShapeBasedUI />
+			},
+			{
+				path: 'overlapping-circle-app',
+				element: <OverlappingCircleApp />
 			}
 		]
 	}

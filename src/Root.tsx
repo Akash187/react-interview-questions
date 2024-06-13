@@ -70,6 +70,13 @@ export default function Root() {
 						active={location.pathname === '/interactive-shape-based-ui-uber'}
 						onClick={close}
 					/>
+					<NavLink
+						label="2. Overlapping Cirlce App | Uber"
+						component={Link}
+						to="/overlapping-circle-app"
+						active={location.pathname === '/overlapping-circle-app'}
+						onClick={close}
+					/>
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShell.Main>
