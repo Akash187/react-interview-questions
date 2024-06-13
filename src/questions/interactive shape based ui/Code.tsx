@@ -82,6 +82,7 @@ export default function Solution() {
 								/>
 							) : (
 								<div
+									key={id}
 									style={{
 										width: '60px'
 									}}
