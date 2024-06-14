@@ -77,6 +77,15 @@ export default function Root() {
 						active={location.pathname === '/overlapping-circle-app'}
 						onClick={close}
 					/>
+					<NavLink
+						label="3. Interactive JIRA Velocity Bar Chart"
+						component={Link}
+						to="/interactive-jira-velocity-bar-chart"
+						active={
+							location.pathname === '/interactive-jira-velocity-bar-chart'
+						}
+						onClick={close}
+					/>
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShell.Main>

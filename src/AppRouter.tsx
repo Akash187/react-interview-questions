@@ -2,6 +2,12 @@ import { createBrowserRouter } from 'react-router-dom'
 import { lazy } from 'react'
 import Root from './Root'
 import Home from './Home'
+const InteractiveJIRAVelocityBarChart = lazy(
+	() =>
+		import(
+			'./questions/interactive JIRA velocity bar chart/InteractiveJIRAVelocityBarChart'
+		)
+)
 const InteractiveShapeBasedUI = lazy(
 	() => import('./questions/interactive shape based ui/InteractiveShapeBasedUI')
 )
@@ -26,6 +32,10 @@ const AppRouters = createBrowserRouter([
 			{
 				path: 'overlapping-circle-app',
 				element: <OverlappingCircleApp />
+			},
+			{
+				path: 'interactive-jira-velocity-bar-chart',
+				element: <InteractiveJIRAVelocityBarChart />
 			}
 		]
 	}
