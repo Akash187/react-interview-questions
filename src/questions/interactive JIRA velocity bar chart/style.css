@@ -1,0 +1,13 @@
+:root {
+  --final-height: 100%;
+}
+
+@keyframes growBar {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: var(--final-height);
+  }
+}

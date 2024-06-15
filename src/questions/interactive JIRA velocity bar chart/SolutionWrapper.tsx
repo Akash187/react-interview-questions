@@ -1,5 +1,6 @@
 import { Code, Container, Stack, Title } from '@mantine/core'
 import Solution1 from './Solution1'
+import Solution2 from './Solution2'
 
 const inputData = `
 	const CHART_DATA = [
@@ -20,9 +21,9 @@ const SolutionWrapper = () => {
 				<Title order={3}>Input</Title>
 				<Code block>{inputData}</Code>
 				<Title order={3}>Solution 1 (Using Canvas API)</Title>
-				<div data-mantine-color-scheme="light">
-					<Solution1 />
-				</div>
+				<Solution1 />
+				<Title order={3}>Solution 2 (Using DOM API)</Title>
+				<Solution2 />
 			</Stack>
 		</Container>
 	)
