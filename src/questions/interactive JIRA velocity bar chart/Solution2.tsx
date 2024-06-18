@@ -145,6 +145,7 @@ const Bar = ({ barData, maxHeight }: IBarProps) => {
 				width: '100%',
 				position: 'relative',
 				animation: 'growBar 0.5s ease-in-out forwards',
+				//@ts-ignore
 				'--final-height': height
 			}}
 			onMouseEnter={() => setShowTooltip(true)}

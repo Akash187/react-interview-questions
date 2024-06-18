@@ -64,14 +64,14 @@ export default function Root() {
 			<AppShell.Navbar>
 				<ScrollArea p="xs">
 					<NavLink
-						label="1. Interactive Shape Based UI | Uber"
+						label="1. Interactive Shape Based UI"
 						component={Link}
 						to="/interactive-shape-based-ui-uber"
 						active={location.pathname === '/interactive-shape-based-ui-uber'}
 						onClick={close}
 					/>
 					<NavLink
-						label="2. Overlapping Cirlce App | Uber"
+						label="2. Overlapping Cirlce App"
 						component={Link}
 						to="/overlapping-circle-app"
 						active={location.pathname === '/overlapping-circle-app'}
@@ -84,6 +84,13 @@ export default function Root() {
 						active={
 							location.pathname === '/interactive-jira-velocity-bar-chart'
 						}
+						onClick={close}
+					/>
+					<NavLink
+						label="4. Circle Game"
+						component={Link}
+						to="/circle-game"
+						active={location.pathname === '/circle-game'}
 						onClick={close}
 					/>
 				</ScrollArea>

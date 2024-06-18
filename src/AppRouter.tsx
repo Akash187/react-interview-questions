@@ -14,6 +14,7 @@ const InteractiveShapeBasedUI = lazy(
 const OverlappingCircleApp = lazy(
 	() => import('./questions/overlapping circle app/OverlappingCircleApp')
 )
+const CircleGame = lazy(() => import('./questions/circle game/CircleGame'))
 
 const AppRouters = createBrowserRouter([
 	{
@@ -36,6 +37,10 @@ const AppRouters = createBrowserRouter([
 			{
 				path: 'interactive-jira-velocity-bar-chart',
 				element: <InteractiveJIRAVelocityBarChart />
+			},
+			{
+				path: 'circle-game',
+				element: <CircleGame />
 			}
 		]
 	}
