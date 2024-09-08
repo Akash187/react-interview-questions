@@ -93,6 +93,13 @@ export default function Root() {
 						active={location.pathname === '/circle-game'}
 						onClick={close}
 					/>
+					<NavLink
+						label="5. Avatar Picker"
+						component={Link}
+						to="/avatar-picker"
+						active={location.pathname === '/avatar-picker'}
+						onClick={close}
+					/>
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShell.Main>

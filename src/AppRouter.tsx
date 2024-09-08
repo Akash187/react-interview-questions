@@ -15,6 +15,9 @@ const OverlappingCircleApp = lazy(
 	() => import('./questions/overlapping circle app/OverlappingCircleApp')
 )
 const CircleGame = lazy(() => import('./questions/circle game/CircleGame'))
+const AvatarPicker = lazy(
+	() => import('./questions/avatar picker/AvatarPicker')
+)
 
 const AppRouters = createBrowserRouter([
 	{
@@ -41,6 +44,10 @@ const AppRouters = createBrowserRouter([
 			{
 				path: 'circle-game',
 				element: <CircleGame />
+			},
+			{
+				path: 'avatar-picker',
+				element: <AvatarPicker />
 			}
 		]
 	}

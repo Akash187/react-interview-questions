@@ -1,0 +1,97 @@
+:root {
+	--background-color: #2c3e50;
+	--border-color: #3498db;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+.userAvatar {
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.avatar {
+	height: 5rem;
+	width: 5rem;
+	border: 0.25rem solid transparent;
+	border-radius: 50%;
+	transition: border-color 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.avatar:hover {
+	border-color: var(--border-color);
+}
+
+.activeAvatar,
+.activeAvatar:hover {
+	border: 0.25rem solid #3498db;
+}
+
+.avatarPopup {
+	position: absolute;
+	top: 5.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transform: translateY(3rem);
+	opacity: 0;
+	transition:
+		opacity 0.4s ease-in-out,
+		transform 0.6s ease-in-out;
+}
+
+.avatarPopup.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.trianglePointer {
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	height: 1rem;
+	width: 1.5rem;
+	background-color: #2c3e50;
+}
+
+.avatarList {
+	border-radius: 1rem;
+	padding: 1rem 2rem;
+	display: grid;
+	background-color: #2c3e50;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 1.5rem;
+}
+
+.avatarContainer {
+	position: relative;
+}
+
+.loading {
+	position: absolute;
+	height: 5rem;
+	width: 5rem;
+	top: 0;
+	left: 0;
+	border: 4px solid var(--border-color);
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-bottom-color: transparent;
+	animation: rotateBorder 2s linear infinite;
+}
+
+@keyframes rotateBorder {
+	0% {
+		transform: rotate(0deg); /* Start position */
+	}
+	100% {
+		transform: rotate(360deg); /* End position (one full rotation) */
+	}
+}
