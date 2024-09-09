@@ -18,6 +18,9 @@ const CircleGame = lazy(() => import('./questions/circle game/CircleGame'))
 const AvatarPicker = lazy(
 	() => import('./questions/avatar picker/AvatarPicker')
 )
+const MemoryGame = lazy(
+	() => import('./questions/color memory game/MemoryGame')
+)
 
 const AppRouters = createBrowserRouter([
 	{
@@ -48,6 +51,10 @@ const AppRouters = createBrowserRouter([
 			{
 				path: 'avatar-picker',
 				element: <AvatarPicker />
+			},
+			{
+				path: 'color-memory-game',
+				element: <MemoryGame />
 			}
 		]
 	}

@@ -10,3 +10,4 @@ This is a list of ReactJs Interview Questions for Practise.
 3. [Interactive JIRA Velocity BarChart | Atlassian](https://reactiq.netlify.app/interactive-jira-velocity-bar-chart)
 4. [Circle Game](https://reactiq.netlify.app/circle-game)
 5. [Avatar Picker](https://reactiq.netlify.app/avatar-picker)
+6. [Color Memory Game](https://reactiq.netlify.app/color-memory-game)

@@ -100,6 +100,13 @@ export default function Root() {
 						active={location.pathname === '/avatar-picker'}
 						onClick={close}
 					/>
+					<NavLink
+						label="6. Memory Game"
+						component={Link}
+						to="/color-memory-game"
+						active={location.pathname === '/color-memory-game'}
+						onClick={close}
+					/>
 				</ScrollArea>
 			</AppShell.Navbar>
 			<AppShell.Main>
